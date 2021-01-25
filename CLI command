@@ -1,0 +1,114 @@
+#Node 6.9++++
+https://nodejs.org/uk/download/
+ng –v
+ng help
+
+#Installing Angular CL
+npm install -g @angular/cli
+ng -v
+
+#Help
+ng help
+ng generate --help
+
+#Commands
+ng new  (ng n)
+---
+ng new--help–получение помощи по команде
+ng new my-first-project **new project with name= my-first-project 
+cd my-first-project  **go to directory project
+ng serve    **run
+---
+ng new <name> <options>
+--style –смена типа стилей
+--prefix –смена префикса по умолчанию для селекторов
+--skip-install –не устанавливать npmмодули
+--skip-tests –не создавать тесты
+--skip-git–не добавлять проект в репозиторий
+--routing –добавить код для маршрутизации
+--dry-run –вывести отчет о изменениях, но не производить изменения
+**************************************************************
+ng generate (ng g)
+---
+ng generate<blueprint> <options>
+Ng generate component table -> table.component.ts
+Ng generate serviceuser-date -> user-data.ts
+Ng generate classuser-model -> user-model.ts
+generate -g
+component -c
+Component c
+Directive d
+Pipe  P
+Service  s
+Class  cl
+Guard  g
+Interface  i
+Enum   e
+Module  m
+"ng generate component table" = "ng g c table"
+--flat Создавать директорию длякомпонента?
+--inline-template  -it  Встроитьшаблон в .tsфайл
+--inline-style -is  Встроитьстили в .tsфайл
+--spec  Создать тесы
+--view-encapsulation  -ve  Стратегия инкапсуляциипредставления
+--change-detection  -de     Стратегияопределения изменений
+--dry-run  -d   Не создавать файлы, но вывести отчет
+-------------------routing
+ng new my-app --routing –новое приложение с маршрутизацией
+ng g m admin --routing –создание модуля и модуля для маршрутизации
+ng g guard auth–создание CanActivateguard auth.guard.ts
+*************************************************
+ng lint  (ng l)
+---
+ng lint –проверка TypeScript кода
+ng lint --help –справка по команде
+ng lint --format stylish –проверка кода и форматирование вывода
+ng lint --fix –проверить и попробовать исправить ошибки
+
+************************************************************
+ng build (ng b)
+---
+
+ng build --target=development --environment=dev
+ng build --dev -e=dev
+ng build --dev
+ng build
+ng build --target=production --environment=prod
+ng build --prod -e=prod
+ng build --prod
+npm install source-map-explorer --save-dev
+
+**
+                        ng buildng                          build --prod
+                        environmentenvironment.ts      environment.prod.ts
+Maps                        да                              нет
+ExtractCSS                в JS                            в CSS файлы
+Минимзация                  нет                               да
+Tree-Shaking                нет                               да
+AOT                         нет                               да
+Bundling                    да                                да
+**
+ng build options
+
+--sourcemap   -sm     Генерировать map файлы
+--aot                 Ahead of Time компиляция
+--watch       -w      Отслеживание изменений и перекомпиляция
+--environment -e      Определение среды(environment)при сборке
+--target      -t      Определение цели (target)сборки
+--dev                 Среда и цель dev
+--prod                Среда и цель prod
+****************************************************************************
+ng serve  (ng s)
+ng test
+ng e2e  (ng e)
+ng doc
+ng help
+ng set
+----
+ng set<property> <value>
+флаг --global (alias: -g)позволяет внести изменения в глобальный файл.
+Глобальный файл .angular-cli.jsonсодержит настройки для всех проектов.
+ng set defaults.styleExtscss
+ng set defaults.styleExtscss--global
+****
+
